@@ -3,5 +3,19 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+require 'faker'
+
+
+puts "Creating database"
+
+10.times do
+  movie = Movie.create(
+    title: Faker::Movie.title,
+    overview: Faker::Movie.quote,
+    poster_url: Faker::LoremFlickr.image,
+    rating: rand(1..5)
+  )
+  puts "Movie with id: #{movie.id} has been created"
+end
+
+puts "Finished!"
