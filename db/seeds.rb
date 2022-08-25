@@ -5,7 +5,7 @@
 #
 require 'faker'
 Movie.destroy_all
-puts "Creating database"
+puts "Creating movie"
 
 10.times do
   movie = Movie.create!(
@@ -18,6 +18,10 @@ puts "Creating database"
 end
 
 puts "Finished movies!"
+
+
+List.destroy_all
+puts "Creating list"
 
 3.times do
   list = List.create(
