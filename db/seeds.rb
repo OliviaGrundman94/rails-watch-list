@@ -5,6 +5,9 @@
 #
 require 'faker'
 Movie.destroy_all
+List.destroy_all
+Bookmark.destroy_all
+
 puts "Creating movie"
 
 10.times do
